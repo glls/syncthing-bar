@@ -1,5 +1,7 @@
-syncthing-bar
+syncthing-bar [![Build Status](https://travis-ci.org/m0ppers/syncthing-bar.svg?branch=master)](https://travis-ci.org/m0ppers/syncthing-bar)
 =============
+
+**THIS PROJECT IS OBSOLETE NOW AS THERE IS AN OFFICIAL CLIENT: https://github.com/syncthing/syncthing-macos**
 
 A little statusbar for http://syncthing.net/ on OSX
 
@@ -36,3 +38,10 @@ Syncthingbar is intended for local usage only. It will hardcode host and port an
 ## Installation Package
 
 The latest release can be found on the [releases tab](https://github.com/m0ppers/syncthing-bar/releases)
+
+## Installation using homebrew
+
+After you have installed [homebrew](http://brew.sh) you can install syncthing-bar with the `brew` command:
+
+    brew tap caskroom/cask
+    brew cask install syncthing-bar

@@ -8,7 +8,7 @@
 
 import Cocoa
 import XCTest
-import syncthing_bar
+@testable import syncthing_bar
 
 class DummyWorkspace: NSWorkspace {
     internal var openedUrl : NSURL?
@@ -20,23 +20,12 @@ class DummyWorkspace: NSWorkspace {
 }
 
 class SyncthingBarTests: XCTestCase {
-
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
     func testOpenWhitespacedFolder() {
-        var log : SyncthingLog = SyncthingLog()
+        let log : SyncthingLog = SyncthingLog()
         let syncthingBar = SyncthingBar(log: log);
         
-        var sender = NSMenuItem();
-        sender.representedObject = SyncthingFolder(id: NSString(string: "1"), path: NSString(string: "/der hans"));
+        let sender = NSMenuItem();
+        sender.representedObject = SyncthingFolder(id: NSString(string: "1"), path: NSString(string: "/der hans"), label: NSString(string: "testung"));
         
         let workspace = DummyWorkspace()
         syncthingBar.workspace = workspace
